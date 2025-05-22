@@ -1,10 +1,10 @@
 import {  StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import Home from './pages/Home.jsx;'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import {ThemeProvider, createTheme, CssBaseline } from '@mui/material'
+import './index.css';
+import App from './App.jsx';
+import Home from './pages/Home.jsx';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {ThemeProvider, createTheme, CssBaseline } from '@mui/material';
 
 export const Theme = createTheme({
   typography: {
