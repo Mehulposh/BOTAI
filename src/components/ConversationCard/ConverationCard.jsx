@@ -9,7 +9,7 @@ import ThumbDownAltIcon from "@mui/icons-material/ThumbDownAlt";
 import {useState,useEffect} from 'react';
 
 
-function CoversationCard({
+function ConversationCard({
         details,
         showFeedbackModal,
         setConversation, 
@@ -27,14 +27,14 @@ function CoversationCard({
 
             setConversation((prev) => {
                 return prev.map((item) => {
-                    if(prev.id === details.id){
+                    if(item.id === details.id){
                         return {...item, rating: rating || 0};
                     }
-                    return {...item};
+                    return item;
                 });
             });
 
-        },[rating]);
+        },[rating,isRating, setConversation, details.id]);
 
 
         return (
@@ -76,7 +76,7 @@ function CoversationCard({
                         spacing={2}
                         alignItems={'center'}
                     >
-                        <Typography fontSize={{xs: 10, md: 12}} color={text.primary}>
+                        <Typography fontSize={{xs: 10, md: 12}} color={"text.primary"}>
                             {format(details.time, 'hh:mm a')}
                         </Typography>
                         {details.type === "AI" && !readOnly && (
@@ -150,4 +150,4 @@ function CoversationCard({
         );
 }   
 
-export default CoversationCard;
+export default ConversationCard;

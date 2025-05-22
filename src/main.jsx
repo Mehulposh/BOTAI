@@ -1,8 +1,8 @@
-import { Children, StrictMode } from 'react'
+import {  StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import Home from './pages/Home.jsx0;'
+import Home from './pages/Home.jsx;'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import {ThemeProvider, createTheme, CssBaseline } from '@mui/material'
 
@@ -24,7 +24,7 @@ export const Theme = createTheme({
     },
 
     background: {
-      default: 'linear-gradient(180deg, rgba(215, 199, 244, 0.2) 0%, rgba(151, 133, 186, 0.2) 100%)',
+      default: 'rgba(215, 199, 244, 0.2)',
       paper: 'rgba(215, 199, 244, 0.13)',
     },
 
@@ -38,11 +38,12 @@ export const Theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          backgroundColor: 'linear-gradient(180deg, rgba(215, 199, 244, 0.2) 0%, rgba(151, 133, 186, 0.2) 100%)', // Setting body background
-          color: 'rgba(60, 60, 60, 1)', // Default text color for the body
-          fontFamily: 'Ubuntu, Open Sans', // Applying font globally
-          margin: 0, // Resetting margin
-          padding: 0, // Resetting padding
+          background: 'linear-gradient(180deg, rgba(215, 199, 244, 0.2) 0%, rgba(151, 133, 186, 0.2) 100%)', // Setting body background
+          color: 'rgba(60, 60, 60, 1)', 
+          fontFamily: 'Ubuntu, Open Sans', 
+          minheight: '100vh',
+          margin: 0, 
+          padding: 0, 
         },
       },
     },
