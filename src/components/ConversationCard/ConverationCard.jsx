@@ -12,7 +12,7 @@ import {useState,useEffect} from 'react';
 function ConversationCard({
         details,
         showFeedbackModal,
-        setConversation, 
+        setChat, 
         readOnly = false,
         setSelectedChatId,
     })
@@ -25,7 +25,7 @@ function ConversationCard({
         useEffect(()=> {
             if(!isRating) return;
 
-            setConversation((prev) => {
+            setChat((prev) => {
                 return prev.map((item) => {
                     if(item.id === details.id){
                         return {...item, rating: rating || 0};
@@ -34,7 +34,7 @@ function ConversationCard({
                 });
             });
 
-        },[rating,isRating, setConversation, details.id]);
+        },[rating,isRating, setChat, details.id]);
 
 
         return (

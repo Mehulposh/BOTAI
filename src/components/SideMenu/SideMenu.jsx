@@ -5,7 +5,7 @@ import Chat from '../../assets/newChat.svg';
 import Bot from '../../assets/aiImage.svg';
 
 
-function SideMenu({closeMenu, setConversation}){
+function SideMenu({closeMenu, setChat}){
     const isMobile = useMediaQuery('(max-width: 900px');
     
     return (
@@ -39,7 +39,7 @@ function SideMenu({closeMenu, setConversation}){
                         bgcolor: 'primary.main'
                     }}
                     onClick={()=>{
-                        setConversation([]);
+                        setChat([]);
                         closeMenu();
                     }}
                 >
