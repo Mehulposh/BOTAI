@@ -69,6 +69,10 @@ function Input({chat,clearChat,setScroll,generateAIResponse}){
                     style={{
                         flex: 1,
                         backgroundColor: 'white',
+                        borderRadius: '8px',
+                        padding: '5px',
+                        border: '1px solid rgba(175, 159, 205, 1)',
+                        
                     }}
                 />
                 <Button 
