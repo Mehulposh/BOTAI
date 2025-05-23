@@ -13,10 +13,12 @@ function Input({chat,clearChat,setScroll,generateAIResponse}){
     },[]);
 
     const handleSave = () =>{
-        const chatHistory = localStorage.getItem('conversation') || [];
+        const chatHistory = JSON.parse(localStorage.getItem('conversation')) || [];
         const date = new Date();
 
-        localStorage.setItem('conversation' ,   JSON.stringify([{chat: chat,dateTime: date }, ...chatHistory]));
+       const newChat = { chat, dateTime: date };
+
+       localStorage.setItem('conversation', JSON.stringify([newChat, ...chatHistory]));
 
         clearChat();
         setIsSnackbar(true);

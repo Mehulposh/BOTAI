@@ -1,21 +1,22 @@
 import { Stack,Typography } from "@mui/material";
-import { format,isEqual,startOfDay,add } from "date-fns";
+import { format,isEqual,startOfDay,add,parseISO  } from "date-fns";
 import ConversationCard from "../ConversationCard/ConverationCard";
 
 
 function historycard({details}){
     
     const CustomDate = (date) => {
+        const parsedDate = startOfDay(parseISO(date));
         const today = startOfDay(new Date());
 
-        if(isEqual(today,date)){
+        if(isEqual(today,parsedDate)){
             return "Today's Chats";
         }
-        else if(isEqual(today,add(date,{days: 1}))){
+        else if(isEqual(parsedDate,add(today,{days: - 1}))){
             return "Yesterdays' Chats";
         }
         else{
-            return format(date,'do LLL yyyy');
+            return format(parsedDate,'do LLL yyyy');
         }
     };
 
@@ -27,14 +28,14 @@ function historycard({details}){
             <Typography
                 fontWeight={700}
             >
-                {CustomDate(startOfDay(new Date(details.dateTime)))}
+                {CustomDate(details.dateTime)}
             </Typography>
 
             <Stack
                 spacing={2}
             >
-                {details.chat.map((item) => {
-                    return <ConversationCard details={item} readOnly={true} key={item.id}/> ;
+                {details.chat.map((item,idx) => {
+                    return <ConversationCard details={item} readOnly={true} key={idx}/> ;
                 })}
             </Stack>
         </Stack>

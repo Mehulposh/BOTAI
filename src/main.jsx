@@ -70,16 +70,17 @@ export const Theme = createTheme({
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App/>,
+    element: <App />,
     children: [
       {
-        path: '/',
-        element: <Home/>,
+        path: 'history',
+        element: <History />,
       },
       {
-        path: '/history',
-        element: <History/>,
+        path: '/',
+        element: <Home />,
       },
+      
     ]
   }
 ])

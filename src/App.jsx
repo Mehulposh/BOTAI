@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import { Outlet } from 'react-router-dom';
 import { CssBaseline, Grid } from "@mui/material";
 import SideMenu  from './components/SideMenu/SideMenu';
@@ -20,8 +20,11 @@ function App() {
           }}
         >
           <Grid
-            size={{sm: 12 , md:3}}
+            size={{sm: 12 , md:2.7}}
             height={'100vh'}
+            sx={{
+              bgcolor: 'primary.white',
+            }}
           >
             <SideMenu 
               setChat={setChat}
@@ -30,7 +33,7 @@ function App() {
           </Grid>
 
           <Grid
-            size={{sm: 12 , md: 9}}
+            size={{sm: 12 , md: 9.3}}
           >
             <Outlet context={{chat: chat, setChat: setChat , handleMobileMenu: setMenuOpen }} />
           </Grid>
