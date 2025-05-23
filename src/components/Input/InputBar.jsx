@@ -53,7 +53,8 @@ function Input({chat,clearChat,setScroll,generateAIResponse}){
                     required
                     inputRef={inputRef}
                     sx={{
-                        flex: 1
+                        flex: 1,
+                        bgcolor: 'primary.white',
                     }}
                 />
                 <Button 
@@ -64,7 +65,7 @@ function Input({chat,clearChat,setScroll,generateAIResponse}){
                     Ask
                 </Button>
                 <Button
-                    variant='outlined'
+                    variant='contained'
                     onClick={handleSave}
                     sx={{fontSize: 15, px: 2}}
                 >
