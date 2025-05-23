@@ -9,7 +9,9 @@ function Input({chat,clearChat,setScroll,generateAIResponse}){
     const inputRef = useRef(null);
 
     useEffect(()=> {
-        inputRef.current.focus();
+        if(inputRef.current){
+            inputRef.current.focus();
+        }
     },[]);
 
     const handleSave = () =>{
@@ -61,9 +63,9 @@ function Input({chat,clearChat,setScroll,generateAIResponse}){
                     type='text'
                     value= {input}
                     onChange={(e) => setInput(e.target.value)}
-                    placeholder='Message Bot AI…'
+                    placeholder='Message Bot AI...'
                     required
-                    Ref={inputRef}
+                    ref={inputRef}
                     style={{
                         flex: 1,
                         bgcolor: 'primary.white',
