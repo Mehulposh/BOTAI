@@ -45,7 +45,7 @@ function Input({chat,clearChat,setScroll,generateAIResponse}){
                 padding={1}
                 
             >
-                <TextField 
+                {/* <TextField 
                     type='text'
                     value= {input}
                     onChange={(e) => setInput(e.target.value)}
@@ -53,6 +53,18 @@ function Input({chat,clearChat,setScroll,generateAIResponse}){
                     required
                     inputRef={inputRef}
                     sx={{
+                        flex: 1,
+                        bgcolor: 'primary.white',
+                    }}
+                /> */}
+                <input 
+                    type='text'
+                    value= {input}
+                    onChange={(e) => setInput(e.target.value)}
+                    placeholder='Message Bot AI…'
+                    required
+                    Ref={inputRef}
+                    style={{
                         flex: 1,
                         bgcolor: 'primary.white',
                     }}
