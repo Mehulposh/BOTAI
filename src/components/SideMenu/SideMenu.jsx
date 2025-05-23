@@ -82,7 +82,7 @@ function SideMenu({closeMenu, setChat}){
                         }}
                         onClick={closeMenu}
                     >
-                        Past Conversation
+                        Past Conversations
                     </Button>
                 </Link>
             </Box>
