@@ -66,7 +66,7 @@ function ConversationCard({
                         fontWeight={700}
                         fontSize={{xs: 14, md: 16}}
                     >
-                        {details.type === 'AI' ? 'Soul Ai' : 'You'}
+                        {details.type === 'AI' ? 'Soul AI' : 'You'}
                     </Box>
                     <Typography>
                         {details.text}
@@ -82,9 +82,9 @@ function ConversationCard({
                         {details.type === "AI" && !readOnly && (
                             <Stack
                                 direction={'row'}
-                                visibility={{xs: 'visible', md: 'hidden'}}
+                                // visibility={{xs: 'hidden', md: 'visible'}}
                                 sx={{
-                                    opacity: {xs: 1, md: 0},
+                                    opacity: {xs: 1, md: 1},
                                     transition: 'opacity 400ms ease',
                                 }}
                                 className='feedbackButton'
@@ -124,8 +124,9 @@ function ConversationCard({
                             <Rating  
                                 name='simple-controlled'
                                 value={readOnly? details.rating : rating}
-                                onChange={(e,newValue) => {
+                                onChange={(event,newValue) => {
                                     setRating(newValue);
+                                    setIsRating(true);
                                     console.log(newValue);
                                 }}  
                                 sx={{width: '150px'}}
