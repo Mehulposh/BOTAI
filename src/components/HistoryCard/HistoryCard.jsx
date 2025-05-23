@@ -27,7 +27,7 @@ function historycard({details}){
             <Typography
                 fontWeight={700}
             >
-                {CustomDate(startOfDay(new Date(details.datetime)))}
+                {CustomDate(startOfDay(new Date(details.dateTime)))}
             </Typography>
 
             <Stack

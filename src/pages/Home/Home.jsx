@@ -1,4 +1,4 @@
-import { useContext, useState, useRef, useEffect } from "react";
+import {  useState, useRef, useEffect } from "react";
 import { useOutletContext } from "react-router-dom";
 import {v4 as uuid4} from 'uuid';
 import { Stack } from "@mui/material";
@@ -11,14 +11,16 @@ import data from '../../SampleData/SampleData.json';
 
 
 function Home(){
-    const [chat,setChat] = useOutletContext();
+    const {chat,setChat} = useOutletContext();
+    // const Acontext = useOutletContext();
+    // console.log(Acontext);
     const [modalOpen,setModalOpen] = useState(false);
     const [selectedChatId,setSelectedChatId] = useState(false);
     const [scrollBottom , setScrollBottom] = useState(false);
     const sessionRef = useRef(null);
 
     useEffect(() => {
-        sessionRef.current ? .lastElementChild ? .scrollIntoView() ;
+        sessionRef.current?.lastElementChild ?.scrollIntoView() ;
 
     }, [scrollBottom]);
 

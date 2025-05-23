@@ -2,9 +2,10 @@ import {  StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css';
 import App from './App.jsx';
-import Home from './pages/Home.jsx';
+import Home from './pages/Home/Home.jsx';
+import History from './pages/History/History.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import {ThemeProvider, createTheme, CssBaseline } from '@mui/material';
+import {ThemeProvider, createTheme } from '@mui/material';
 
 export const Theme = createTheme({
   typography: {
@@ -73,7 +74,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home/>
+        element: <Home/>,
+      },
+      {
+        path: '/history',
+        element: <History/>,
       },
     ]
   }
@@ -83,7 +88,7 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ThemeProvider theme={Theme}>
-      <CssBaseline />
+      
       <RouterProvider router={router}/>
     </ThemeProvider>
     

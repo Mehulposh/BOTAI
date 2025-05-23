@@ -7,7 +7,7 @@ function History(){
     const[prevChats, setPrevChats] = useState([]);
 
     useEffect(() => {
-        const history = JSON.parse(localStorage.getItem('conversations')) || [];
+        const history = JSON.parse(localStorage.getItem('conversation')) || [];
 
         setPrevChats(history);
     },[]);
