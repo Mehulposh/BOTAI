@@ -12,7 +12,7 @@ function Input({chat,clearChat,setScroll,generateAIResponse}){
         inputRef.current.focus();
     },[]);
 
-    const handleSave = (e) =>{
+    const handleSave = () =>{
         const chatHistory = localStorage.getItem('conversation') || [];
         const date = new Date();
 
