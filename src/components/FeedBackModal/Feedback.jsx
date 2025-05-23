@@ -22,12 +22,21 @@ function FeedbackModal({ open, onClose, chatId, updateChat }){
         });
 
         setFeedback('');
-        onclose();
+        onClose();
     };
 
     return(
         <Modal open={open} onClose={onClose}>
-            <Box>
+            <Box
+                sx={{
+                    position: 'absolute',
+                    top: '30%',
+                    left: '30%',
+                    width: '50%',
+                    borderRadius: '10px',
+                    p: 4,
+                    bgcolor: 'primary.bgColor',
+                }}>
                 <Stack
                     direction={'row'}
                     justifyContent={'space-between'}
@@ -69,6 +78,7 @@ function FeedbackModal({ open, onClose, chatId, updateChat }){
                         onChange={(e) => setFeedback(e.target.value)}
                         sx={{
                             width: '100%',
+                            bgcolor: 'primary.white',
                         }}
                         required
                     />    

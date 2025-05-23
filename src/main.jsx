@@ -9,7 +9,25 @@ import {ThemeProvider, createTheme } from '@mui/material';
 
 export const Theme = createTheme({
   typography: {
-    fontFamily: 'Ubuntu, Open Sans'
+      body: {
+        fontFamily: 'Ubuntu, Open Sans',
+      },
+      h1: {
+      fontFamily: "Ubuntu, sans-serif",
+      color:  "#9785BA" ,
+      fontSize: 28,
+      fontWeight: 700,
+      },
+
+      h2: {
+      fontFamily: "Ubuntu, sans-serif",
+      color: "text.primary",
+      fontSize: 28,
+      fontWeight: 500,
+      "@media (max-width:600px)": {
+        fontSize: 22,
+        },
+     },
    },
 
    palette: {
@@ -17,6 +35,7 @@ export const Theme = createTheme({
        main: 'rgba(151, 133, 186, 1)',
        light: 'rgba(175, 159, 205, 1)',
        white: 'rgba(249, 250, 250, 1)',
+       bgColor: "#FAF7FF",
     },
 
     secondary: {
