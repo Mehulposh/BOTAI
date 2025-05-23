@@ -35,11 +35,13 @@ function Input({chat,clearChat,setScroll,generateAIResponse}){
         <Box
             component={'form'}
             onSubmit={handleSubmit}
+            width={'100%'}
         >
             <Stack
                 direction={'row'}
                 spacing={2}
                 padding={1}
+                
             >
                 <TextField 
                     type='text'
@@ -48,6 +50,9 @@ function Input({chat,clearChat,setScroll,generateAIResponse}){
                     placeholder='Message Bot AI…'
                     required
                     inputRef={inputRef}
+                    sx={{
+                        flex: 1
+                    }}
                 />
                 <Button 
                     variant='contained' 
