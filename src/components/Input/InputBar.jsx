@@ -68,7 +68,7 @@ function Input({chat,clearChat,setScroll,generateAIResponse}){
                     ref={inputRef}
                     style={{
                         flex: 1,
-                        bgcolor: 'primary.white',
+                        backgroundColor: 'white',
                     }}
                 />
                 <Button 
