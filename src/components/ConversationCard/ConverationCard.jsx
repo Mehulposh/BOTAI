@@ -64,7 +64,7 @@ function ConversationCard({
                     <Box 
                         component={'span'}
                         fontWeight={700}
-                        fontSize={{xs: 14, md: 16}}
+                        fontSize={{xs: 20, md: 18}}
                     >
                         {details.type === 'AI' ? 'Soul AI' : 'You'}
                     </Box>
@@ -76,7 +76,7 @@ function ConversationCard({
                         spacing={2}
                         alignItems={'center'}
                     >
-                        <Typography fontSize={{xs: 10, md: 12}} color={"text.primary"}>
+                        <Typography fontSize={{xs: 12, md: 14}} color={"text.primary"}>
                             {format(details.time, 'hh:mm a')}
                         </Typography>
                         {details.type === "AI" && !readOnly && (
@@ -116,7 +116,7 @@ function ConversationCard({
                         <Stack>
                             <Typography
                                 component={'legend'}
-                                fontSize={{xs: 10, md: 12}}
+                                fontSize={{xs: 12, md: 14}}
                                 mb={0.5}
                             >
                                 {readOnly ? 'Rating:' :'Rate this response'}
