@@ -79,6 +79,11 @@ function Home(){
                 spacing={2}
                 margin={2}
                 ref={sessionRef}
+                sx={{
+                    '@media (max-width: 900px)': {
+                        justifyContent: 'flex-end',
+                    }
+                }}
             >
                 {ChatCard}
             </Stack>
