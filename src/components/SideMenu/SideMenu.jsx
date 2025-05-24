@@ -6,7 +6,7 @@ import Bot from '../../assets/aiImage.svg';
 
 
 function SideMenu({closeMenu, setChat}){
-    const isMobile = useMediaQuery('(max-width: 900px');
+    const isMobile = useMediaQuery('(max-width: 900px)');
     
     return (
         <Stack 

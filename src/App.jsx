@@ -24,7 +24,15 @@ function App() {
             height={'100vh'}
             sx={{
               bgcolor: 'primary.white',
+              '@media (max-width: 900px)': {
+                width: '70%',
+                transform: menuOpen ? 'translateX(0)' : 'translateX(-100%)',
+                transition: 'transform 400ms ease',
+              },
             }}
+            position={{ xs: 'fixed', md: 'relative' }}
+            zIndex={{ xs: 9999, md: 1 }}
+            
           >
             <SideMenu 
               setChat={setChat}
