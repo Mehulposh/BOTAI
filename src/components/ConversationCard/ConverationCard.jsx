@@ -90,7 +90,7 @@ function ConversationCard({
                                 className='feedbackButton'
                                 >
                                     <IconButton
-                                        size='small'
+                                        size='medium'
                                         onClick={()=> setIsRating((prev) => !prev)}
                                     >
                                         {!isRating && <ThumbUpOffAltIcon fontSize='inherit'/>}
@@ -98,7 +98,7 @@ function ConversationCard({
 
                                     </IconButton>
                                     <IconButton
-                                        size='small'
+                                        size='medium'
                                         onClick={()=>{
                                             setIsFeedBack((prev) => !prev);
                                             setSelectedChatId(details.id);
