@@ -33,7 +33,7 @@ export const Theme = createTheme({
    palette: {
     primary: {
        main: 'rgba(151, 133, 186, 1)',
-       light: 'rgba(175, 159, 205, 1)',
+       light: 'rgb(205, 188, 238)',
        white: 'rgba(249, 250, 250, 1)',
        bgColor: "#FAF7FF",
     },

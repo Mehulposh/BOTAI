@@ -36,7 +36,7 @@ function SideMenu({closeMenu, setChat}){
                     alignItems={'center'}
                     padding={2}
                     sx={{
-                        bgcolor: 'primary.main'
+                        bgcolor: 'primary.light'
                     }}
                     onClick={()=>{
                         setChat([]);

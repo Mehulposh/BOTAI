@@ -46,6 +46,12 @@ function ConversationCard({
                 alignItems={'flex-start'}
                 boxShadow={"0 0 4px rgba(0,0,0,0.1)"}
                 bgcolor={readOnly ? "primary.main" : "primary.light"}
+                sx={{
+                        "&:hover .feedbackButton": {
+                            visibility: "visible",
+                            opacity: 1,
+                        },
+                    }}
                 >
 
                 <Box 
@@ -64,11 +70,11 @@ function ConversationCard({
                     <Box 
                         component={'span'}
                         fontWeight={700}
-                        fontSize={{xs: 24, md: 20}}
+                        fontSize={{xs: 14, md: 16}}
                     >
                         {details.type === 'AI' ? 'Soul AI' : 'You'}
                     </Box>
-                    <Typography fontSize={{xs: 22, md: 24 }}>
+                    <Typography fontSize={{xs: 12, md: 16 }}>
                         {details.text}
                     </Typography>
                     <Stack
@@ -76,15 +82,15 @@ function ConversationCard({
                         spacing={2}
                         alignItems={'center'}
                     >
-                        <Typography fontSize={{xs: 16, md: 18}} color={"text.primary"}>
+                        <Typography fontSize={{xs: 8, md: 12}} color={"text.primary"}>
                             {format(details.time, 'hh:mm a')}
                         </Typography>
                         {details.type === "AI" && !readOnly && (
                             <Stack
                                 direction={'row'}
-                                // visibility={{xs: 'hidden', md: 'visible'}}
+                                visibility={{xs: 'hidden', md: 'visible'}}
                                 sx={{
-                                    opacity: {xs: 1, md: 1},
+                                    opacity: {xs: 1, md: 0},
                                     transition: 'opacity 400ms ease',
                                 }}
                                 className='feedbackButton'
