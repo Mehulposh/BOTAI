@@ -68,7 +68,7 @@ function ConversationCard({
                     >
                         {details.type === 'AI' ? 'Soul AI' : 'You'}
                     </Box>
-                    <Typography>
+                    <Typography fontSize={{xs: 22, md: 24 }}>
                         {details.text}
                     </Typography>
                     <Stack
